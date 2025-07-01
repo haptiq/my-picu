@@ -1,95 +1,80 @@
 <?php
 /**
- * Add US states to country selector
+ * Add US States to the country list.
  */
-function insertAfterKey( $array, $key, $newItems ) {
-	$keys = array_keys( $array );
-	$index = array_search( $key, $keys );
+function my_picu_add_countries_to_country_list( $countries ) {
+	// US States
+	$us_states = [
+		'us_al' => 'Alabama',
+		'us_ak' => 'Alaska',
+		'us_az' => 'Arizona',
+		'us_ar' => 'Arkansas',
+		'us_ca' => 'California',
+		'us_co' => 'Colorado',
+		'us_ct' => 'Connecticut',
+		'us_de' => 'Delaware',
+		'us_fl' => 'Florida',
+		'us_ga' => 'Georgia',
+		'us_hi' => 'Hawaii',
+		'us_id' => 'Idaho',
+		'us_il' => 'Illinois',
+		'us_in' => 'Indiana',
+		'us_ia' => 'Iowa',
+		'us_ks' => 'Kansas',
+		'us_ky' => 'Kentucky',
+		'us_la' => 'Louisiana',
+		'us_me' => 'Maine',
+		'us_md' => 'Maryland',
+		'us_ma' => 'Massachusetts',
+		'us_mi' => 'Michigan',
+		'us_mn' => 'Minnesota',
+		'us_ms' => 'Mississippi',
+		'us_mo' => 'Missouri',
+		'us_mt' => 'Montana',
+		'us_ne' => 'Nebraska',
+		'us_nv' => 'Nevada',
+		'us_nh' => 'New Hampshire',
+		'us_nj' => 'New Jersey',
+		'us_nm' => 'New Mexico',
+		'us_ny' => 'New York',
+		'us_nc' => 'North Carolina',
+		'us_nd' => 'North Dakota',
+		'us_oh' => 'Ohio',
+		'us_ok' => 'Oklahoma',
+		'us_or' => 'Oregon',
+		'us_pa' => 'Pennsylvania',
+		'us_ri' => 'Rhode Island',
+		'us_sc' => 'South Carolina',
+		'us_sd' => 'South Dakota',
+		'us_tn' => 'Tennessee',
+		'us_tx' => 'Texas',
+		'us_ut' => 'Utah',
+		'us_vt' => 'Vermont',
+		'us_va' => 'Virginia',
+		'us_wa' => 'Washington',
+		'us_wv' => 'West Virginia',
+		'us_wi' => 'Wisconsin',
+		'us_wy' => 'Wyoming',
+		
+		// US Territories
+		'us_dc' => 'District of Columbia',
+		'us_pr' => 'Puerto Rico',
+		'us_vi' => 'U.S. Virgin Islands',
+		'us_gu' => 'Guam',
+		'us_as' => 'American Samoa',
+		'us_mp' => 'Northern Mariana Islands',
+		
+		// Minor Outlying Islands
+		'us_um' => 'U.S. Minor Outlying Islands'
+	];
 
-	if ( $index === false ) {
-		// Key not found, append to end
-		return array_merge( $array, $newItems );
-	}
+	// Use this if you want to insert the US States after the US and keep the other countries:
+	$countries = my_picu_insert_after_key( $countries, 'us', [ 'US States' => $us_states ] );
 
-	$position = $index + 1;
-	$before = array_slice( $array, 0, $position, true );
-	$after = array_slice( $array, $position, null, true );
-
-	return $before + $newItems + $after;
-}
-
-function my_picu_add_us_states_to_country_list( $countries ) {
-	$original_countries = $countries;
-
-	$countries = [];
-	$countries['_group_us_states'] = 'US States';
-	$countries['us_al'] = 'Alabama';
-	$countries['us_ak'] = 'Alaska';
-	$countries['us_az'] = 'Arizona';
-	$countries['us_ar'] = 'Arkansas';
-	$countries['us_ca'] = 'California';
-	$countries['us_co'] = 'Colorado';
-	$countries['us_ct'] = 'Connecticut';
-	$countries['us_de'] = 'Delaware';
-	$countries['us_fl'] = 'Florida';
-	$countries['us_ga'] = 'Georgia';
-	$countries['us_hi'] = 'Hawaii';
-	$countries['us_id'] = 'Idaho';
-	$countries['us_il'] = 'Illinois';
-	$countries['us_in'] = 'Indiana';
-	$countries['us_ia'] = 'Iowa';
-	$countries['us_ks'] = 'Kansas';
-	$countries['us_ky'] = 'Kentucky';
-	$countries['us_la'] = 'Louisiana';
-	$countries['us_me'] = 'Maine';
-	$countries['us_md'] = 'Maryland';
-	$countries['us_ma'] = 'Massachusetts';
-	$countries['us_mi'] = 'Michigan';
-	$countries['us_mn'] = 'Minnesota';
-	$countries['us_ms'] = 'Mississippi';
-	$countries['us_mo'] = 'Missouri';
-	$countries['us_mt'] = 'Montana';
-	$countries['us_ne'] = 'Nebraska';
-	$countries['us_nv'] = 'Nevada';
-	$countries['us_nh'] = 'New Hampshire';
-	$countries['us_nj'] = 'New Jersey';
-	$countries['us_nm'] = 'New Mexico';
-	$countries['us_ny'] = 'New York';
-	$countries['us_nc'] = 'North Carolina';
-	$countries['us_nd'] = 'North Dakota';
-	$countries['us_oh'] = 'Ohio';
-	$countries['us_ok'] = 'Oklahoma';
-	$countries['us_or'] = 'Oregon';
-	$countries['us_pa'] = 'Pennsylvania';
-	$countries['us_ri'] = 'Rhode Island';
-	$countries['us_sc'] = 'South Carolina';
-	$countries['us_sd'] = 'South Dakota';
-	$countries['us_tn'] = 'Tennessee';
-	$countries['us_tx'] = 'Texas';
-	$countries['us_ut'] = 'Utah';
-	$countries['us_vt'] = 'Vermont';
-	$countries['us_va'] = 'Virginia';
-	$countries['us_wa'] = 'Washington';
-	$countries['us_wv'] = 'West Virginia';
-	$countries['us_wi'] = 'Wisconsin';
-	$countries['us_wy'] = 'Wyoming';
-
-	// US Territories
-	$countries['us_dc'] = 'District of Columbia';
-	$countries['us_pr'] = 'Puerto Rico';
-	$countries['us_vi'] = 'U.S. Virgin Islands';
-	$countries['us_gu'] = 'Guam';
-	$countries['us_as'] = 'American Samoa';
-	$countries['us_mp'] = 'Northern Mariana Islands';
-
-	// Minor Outlying Islands
-	$countries['us_um'] = 'U.S. Minor Outlying Islands';
-
-	$countries['_group_end_us_states'] = '';
-
-	return insertAfterKey( $original_countries, 'us', $countries );
+	// Use this if you want to only show the US States:
+	// $countries = $us_states;
 
 	return $countries;
 }
 
-add_filter( 'picu_countries', 'my_picu_add_us_states_to_country_list' );
+add_filter( 'picu_countries', 'my_picu_add_countries_to_country_list' );
