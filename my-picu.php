@@ -17,19 +17,20 @@
  */
 // require_once( __DIR__ . '/actions/picu-before-collection-images.php' );
 
+
 /**
  * Filters
  */
-// require_once( __DIR__ . '/filters/picu_approval_fields.php' );
+// require_once( __DIR__ . '/filters/picu-approval-fields.php' );
 
 // require_once( __DIR__ . '/filters/picu-collection-do-random-slug.php' );
 
 // require_once( __DIR__ . '/filters/picu-collection-slug.php' );
 
-// require_once( __DIR__ . '/filters/picu_countries.php' );
+require_once( __DIR__ . '/filters/picu-countries.php' );
 
 // require_once( __DIR__ . '/filters/picu-customize-image-sizes.php' );
 
 // require_once( __DIR__ . '/filters/picu-intermediate-images-sizes.php' );
 
-// require_once( __DIR__ . '/filters/picu_large_image_size.php' );
+// require_once( __DIR__ . '/filters/picu-large-image-size.php' );
