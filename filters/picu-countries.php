@@ -68,11 +68,11 @@ function my_picu_add_countries_to_country_list( $countries ) {
 		'us_um' => 'U.S. Minor Outlying Islands'
 	];
 
-	// Use this if you want to insert the US States after the US and keep the other countries:
-	$countries = my_picu_insert_after_key( $countries, 'us', [ 'US States' => $us_states ] );
-
 	// Use this if you want to only show the US States:
-	// $countries = $us_states;
+	$countries = $us_states;
+
+	// Use this if you want to insert the US States after the US and keep the other countries:
+	// $countries = my_picu_insert_after_key( $countries, 'us', $us_states );
 
 	return $countries;
 }
