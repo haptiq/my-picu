@@ -24,6 +24,8 @@
  */
 // require_once( __DIR__ . '/filters/picu-approval-fields.php' );
 
+// require_once( __DIR__ . '/filters/picu-approved-filename.php' );
+
 // require_once( __DIR__ . '/filters/picu-collection-do-random-slug.php' );
 
 // require_once( __DIR__ . '/filters/picu-collection-slug.php' );
