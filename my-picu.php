@@ -38,6 +38,8 @@
 
 // require_once( __DIR__ . '/filters/picu-large-image-size.php' );
 
+// require_once( __DIR__ . '/filters/picu-pro-client-invoice-access.php' );
+
 
 /**
  * Helper function to insert array items after a specific key.
