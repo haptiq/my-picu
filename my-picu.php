@@ -2,7 +2,7 @@
 /**
  * Plugin Name: My picu
  * Plugin URI: https://picu.io/
- * Description: Helper plugin that contains filter to adjust picu settings
+ * Description: Helper plugin that contains actions and filters to adjust picu beyond existing settings.
  * Author: Haptiq
  * Author URI: https://picu.io/
  */
