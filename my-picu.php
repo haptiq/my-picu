@@ -25,6 +25,10 @@
 
 // require_once( __DIR__ . '/filters/picu-approval-warning.php' );
 
+// require_once( __DIR__ . '/filters/picu-custom-scripts.php' );
+
+// require_once( __DIR__ . '/filters/picu-custom-styles.php' );
+
 // require_once( __DIR__ . '/filters/picu-email-attachments.php' );
 
 // require_once( __DIR__ . '/filters/picu-email-bcc.php' );
@@ -71,7 +75,13 @@
 
 // require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
 
+// require_once( __DIR__ . '/filters/picu-password-box-content.php' );
+
 // require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
+
+// require_once( __DIR__ . '/filters/picu-register-intro.php' );
+
+// require_once( __DIR__ . '/filters/picu-registration-confirmation.php' );
 
 // require_once( __DIR__ . '/filters/picu-send-selection-button-text.php' );
 
