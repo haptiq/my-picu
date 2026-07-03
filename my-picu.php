@@ -25,9 +25,29 @@
 
 // require_once( __DIR__ . '/filters/picu-approval-warning.php' );
 
+// require_once( __DIR__ . '/filters/picu-approved-filename.php' );
+
+// require_once( __DIR__ . '/filters/picu-approved-message.php' );
+
+// require_once( __DIR__ . '/filters/picu-capability.php' );
+
+// require_once( __DIR__ . '/filters/picu-client-mail-message.php' );
+
+// require_once( __DIR__ . '/filters/picu-collection-do-random-slug.php' );
+
+// require_once( __DIR__ . '/filters/picu-collection-slug.php' );
+
+// require_once( __DIR__ . '/filters/picu-countries.php' );
+
 // require_once( __DIR__ . '/filters/picu-custom-scripts.php' );
 
 // require_once( __DIR__ . '/filters/picu-custom-styles.php' );
+
+// require_once( __DIR__ . '/filters/picu-customize-image-sizes.php' );
+
+// require_once( __DIR__ . '/filters/picu-default-share-method-is-email.php' );
+
+// require_once( __DIR__ . '/filters/picu-delivery-client-mail-message.php' );
 
 // require_once( __DIR__ . '/filters/picu-email-attachments.php' );
 
@@ -47,25 +67,15 @@
 
 // require_once( __DIR__ . '/filters/picu-email-subject.php' );
 
-// require_once( __DIR__ . '/filters/picu-approved-filename.php' );
-
-// require_once( __DIR__ . '/filters/picu-approved-message.php' );
-
-// require_once( __DIR__ . '/filters/picu-capability.php' );
-
-// require_once( __DIR__ . '/filters/picu-collection-do-random-slug.php' );
-
-// require_once( __DIR__ . '/filters/picu-collection-slug.php' );
-
-// require_once( __DIR__ . '/filters/picu-countries.php' );
-
-// require_once( __DIR__ . '/filters/picu-customize-image-sizes.php' );
+// require_once( __DIR__ . '/filters/picu-filename-separator.php' );
 
 // require_once( __DIR__ . '/filters/picu-intermediate-images-sizes.php' );
 
 // require_once( __DIR__ . '/filters/picu-large-image-size.php' );
 
 // require_once( __DIR__ . '/filters/picu-mail-parts.php' );
+
+// require_once( __DIR__ . '/filters/picu-password-box-content.php' );
 
 // require_once( __DIR__ . '/filters/picu-pro-bank-account-details.php' );
 
@@ -75,13 +85,17 @@
 
 // require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
 
-// require_once( __DIR__ . '/filters/picu-password-box-content.php' );
-
 // require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
+
+// require_once( __DIR__ . '/filters/picu-proof-file-name.php' );
 
 // require_once( __DIR__ . '/filters/picu-register-intro.php' );
 
 // require_once( __DIR__ . '/filters/picu-registration-confirmation.php' );
+
+// require_once( __DIR__ . '/filters/picu-save-email-history.php' );
+
+// require_once( __DIR__ . '/filters/picu-send-password-in-email.php' );
 
 // require_once( __DIR__ . '/filters/picu-send-selection-button-text.php' );
 
