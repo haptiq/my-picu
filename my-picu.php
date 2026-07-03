@@ -19,6 +19,24 @@
  */
 // require_once( __DIR__ . '/filters/picu-approval-fields.php' );
 
+// require_once( __DIR__ . '/filters/picu-email-attachments.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-bcc.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-cc.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-content-type.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-from-address.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-from-name.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-headers.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-styles.php' );
+
+// require_once( __DIR__ . '/filters/picu-email-subject.php' );
+
 // require_once( __DIR__ . '/filters/picu-approved-filename.php' );
 
 // require_once( __DIR__ . '/filters/picu-approved-message.php' );
