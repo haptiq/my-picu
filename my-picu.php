@@ -39,6 +39,8 @@
 
 // require_once( __DIR__ . '/filters/picu-countries.php' );
 
+// require_once( __DIR__ . '/filters/picu-country.php' );
+
 // require_once( __DIR__ . '/filters/picu-custom-scripts.php' );
 
 // require_once( __DIR__ . '/filters/picu-custom-styles.php' );
@@ -86,6 +88,8 @@
 // require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
 
 // require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
+
+// require_once( __DIR__ . '/filters/picu-proof-file-content.php' );
 
 // require_once( __DIR__ . '/filters/picu-proof-file-name.php' );
 
