@@ -1,21 +1,19 @@
 <?php
 /**
- * Define custom filenames when copying approved image names
+ * Customize the filename used when copying approved image filenames.
  *
- * This example adds the extension to the filename
+ * This example appends the original file extension to the filename, e.g.
+ * "IMG_1234" becomes "IMG_1234.jpg".
+ *
+ * @param string $filename      The current filename (without extension by default).
+ * @param int    $attachment_id The attachment post ID.
+ * @return string The modified filename.
  */
 function my_picu_approved_filename( $filename, $attachment_id ) {
-	// Get the file URL
 	$file_url = wp_get_attachment_url( $attachment_id );
-
-	// Get the file extension
 	$file_extension = pathinfo( $file_url, PATHINFO_EXTENSION );
 
-	// Add the extension to the filename
-	$filename = $filename . '.' . $file_extension;
-
-	// Return the filename
-	return $filename;
+	return $filename . '.' . $file_extension;
 }
 
 add_filter( 'picu_approved_filename', 'my_picu_approved_filename', 10, 2 );

@@ -1,9 +1,21 @@
 <?php
 /**
  * Add US States to the country list.
+ *
+ * The two functions below are independent alternatives — enable only one
+ * at a time. Both replace (or extend) the same list, so registering both
+ * hooks would conflict.
+ *
+ * Within each function there are two approaches:
+ *   1. Replace the entire list with just the states/provinces.
+ *   2. Insert them after the parent country entry using my_picu_insert_after_key()
+ *      (defined in my-picu.php), keeping all other countries intact.
+ * Uncomment the approach you want and comment out the other.
+ *
+ * @param array $countries Key-value pairs of country code => country name.
+ * @return array The modified countries list.
  */
 function my_picu_add_us_states_to_country_list( $countries ) {
-	// US States
 	$us_states = [
 		'us_al' => 'Alabama',
 		'us_ak' => 'Alaska',
@@ -64,10 +76,10 @@ function my_picu_add_us_states_to_country_list( $countries ) {
 		'us_wy' => 'Wyoming'
 	];
 
-	// Use this if you want to only show the US States:
+	// Option 1: Replace the entire list with just US States.
 	$countries = $us_states;
 
-	// Use this if you want to insert the US States after the US and keep the other countries:
+	// Option 2: Insert US States after the "United States" entry, keeping all other countries.
 	// $countries = my_picu_insert_after_key( $countries, 'us', $us_states );
 
 	return $countries;
@@ -77,12 +89,16 @@ add_filter( 'picu_countries', 'my_picu_add_us_states_to_country_list' );
 
 
 /**
- * Add Canadian Provinces and Territories to the country list.
+ * Alternative: Add Canadian Provinces and Territories to the country list.
+ *
+ * This is an alternative to the US States function above. Enable this one
+ * (and disable the other) by swapping which add_filter call is commented out.
+ *
+ * @param array $countries Key-value pairs of country code => country name.
+ * @return array The modified countries list.
  */
 function my_picu_add_canadian_provinces_to_country_list( $countries ) {
-	// Canadian Provinces and Territories
 	$canadian_provinces = [
-		// Provinces
 		'ca_ab' => 'Alberta',
 		'ca_bc' => 'British Columbia',
 		'ca_mb' => 'Manitoba',
@@ -98,10 +114,10 @@ function my_picu_add_canadian_provinces_to_country_list( $countries ) {
 		'ca_yt' => 'Yukon'
 	];
 
-	// Use this if you want to only show the Canadian Provinces and Territories:
+	// Option 1: Replace the entire list with just Canadian Provinces and Territories.
 	$countries = $canadian_provinces;
 
-	// Use this if you want to insert the Canadian Provinces after Canada and keep the other countries:
+	// Option 2: Insert them after the "Canada" entry, keeping all other countries.
 	// $countries = my_picu_insert_after_key( $countries, 'ca', $canadian_provinces );
 
 	return $countries;

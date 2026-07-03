@@ -5,18 +5,13 @@
  * Description: Helper plugin that contains actions and filters to adjust picu beyond existing settings.
  * Author: Haptiq
  * Author URI: https://picu.io/
+ * Version: 1.0.0
  */
 
 
 /**
- * In the following uncomment the filters you want to use.
+ * In the following uncomment the filters/actions you want to use.
  */
-
-
-/**
- * Actions
- */
-// require_once( __DIR__ . '/actions/picu-before-collection-images.php' );
 
 
 /**
@@ -25,6 +20,10 @@
 // require_once( __DIR__ . '/filters/picu-approval-fields.php' );
 
 // require_once( __DIR__ . '/filters/picu-approved-filename.php' );
+
+// require_once( __DIR__ . '/filters/picu-approved-message.php' );
+
+// require_once( __DIR__ . '/filters/picu-capability.php' );
 
 // require_once( __DIR__ . '/filters/picu-collection-do-random-slug.php' );
 
@@ -38,7 +37,27 @@
 
 // require_once( __DIR__ . '/filters/picu-large-image-size.php' );
 
+// require_once( __DIR__ . '/filters/picu-mail-parts.php' );
+
+// require_once( __DIR__ . '/filters/picu-pro-bank-account-details.php' );
+
 // require_once( __DIR__ . '/filters/picu-pro-client-invoice-access.php' );
+
+// require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
+
+// require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
+
+
+/**
+ * Actions
+ */
+// require_once( __DIR__ . '/actions/picu-before-collection-images.php' );
+
+
+/**
+ * Misc
+ */
+require_once( __DIR__ . '/misc/recipients-csv.php' );
 
 
 /**
