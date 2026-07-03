@@ -17,7 +17,13 @@
 /**
  * Filters
  */
+// require_once( __DIR__ . '/filters/picu-approval-button-text.php' );
+
 // require_once( __DIR__ . '/filters/picu-approval-fields.php' );
+
+// require_once( __DIR__ . '/filters/picu-approval-heading.php' );
+
+// require_once( __DIR__ . '/filters/picu-approval-warning.php' );
 
 // require_once( __DIR__ . '/filters/picu-email-attachments.php' );
 
@@ -66,6 +72,8 @@
 // require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
 
 // require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
+
+// require_once( __DIR__ . '/filters/picu-send-selection-button-text.php' );
 
 
 /**
