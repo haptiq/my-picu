@@ -43,6 +43,8 @@
 
 // require_once( __DIR__ . '/filters/picu-pro-client-invoice-access.php' );
 
+// require_once( __DIR__ . '/filters/picu-pro-currencies.php' );
+
 // require_once( __DIR__ . '/filters/picu-pro-display-client-invoice.php' );
 
 // require_once( __DIR__ . '/filters/picu-pro-order-status-notification.php' );
